@@ -11,10 +11,11 @@ py.install_sources(
 )
 
 py.extension_module(
-  'fast_g3.fast_g3_core',
+  'fast_g3_core',
   'src/fast_g3_core.cpp',
   include_directories: [incdir_numpy],
   dependencies: [flac, bzip2, openmp],
   cpp_args: ['-Wfatal-errors'],
+  subdir: 'fast_g3',
   install: true,
 )
